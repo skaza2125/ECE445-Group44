@@ -1,5 +1,8 @@
 Week of October 2th:
 We were still debating on our parts, but we decided to start modelling our enclosure, we had some difficulty finding an enclosure that worked for our purpose at the machine shop, so we had to seek outside sources. Furhthermore this is when we were still looking for blower units, but we are running into issues since many of the units that we are looking at are either very loud since they are industrial style blowers or do not move enough air flow. We found some high CFM fans that we believe will work, so we will probably be proceeeding with these that way we can move enough air around the enclosure while still retaining the low noise barrier.
+
+Below you can see some of the CAD models that I have mocked up in order for us to get an understanding of our dimensions. We also use this CAD and Ansys to perform flow simulations so we can see how the air is going to be flowing and how the thermial transfer will occur.
+
 ![Enclosureotherside](https://github.com/user-attachments/assets/880336f1-e831-4f5b-8cb8-5975d4a616bb)
 ![Enclosiure v1](https://github.com/user-attachments/assets/9f50b3e3-2692-46cb-b5bb-763b7860bdf4)
 
