@@ -12,6 +12,9 @@ Below you can see some of the CAD models that I have mocked up in order for us t
 ![Enclosiure v1](https://github.com/user-attachments/assets/9f50b3e3-2692-46cb-b5bb-763b7860bdf4)
 
 
-# October 11th:
+# October 10th:
 We met together in the ECEB, to work on the PCB design and schematic. We ran into some issues since we were unsure if we wanted to have the Buck Converter on the board or if we wanted to have it as a seperate module. We preferred seperate module since it allows us to have easy troubleshooting and unit testing, and the circuit for the buck converter is fairly complicated, so having to solder all of those SMDs perfeclty would be really difficult. Furthermore our PCB is already pretty complicated because we have alot of control aspects like the ESP and the ATMEGA module on the board. For now we decided to leave it on there but we also have the option to add it externally. 
+
+#October 12th:
+Today, we received the fans we ordered and immediately began testing to establish a baseline for their airflow performance. To conduct the test, we powered the fans using a bench PSU in the senior design lab. Our goal was to assess the baseline airflow measurment so we could see if this would move enough air that would make a difference when snaked up the tubing underneath the bed. We decided that if we had two fans that were blowing into a insulated container with smaller volume, we would have enough airflow. Furthermore we looked into the Frequency Generator(FG) pin on the pan, and how we could read this signal. It was very convenient since these are PWM fans that we can control the speed off, and we can also get a live speed reading off the fans using the FG pin, so we can create an accurate feedback loop system.
 
