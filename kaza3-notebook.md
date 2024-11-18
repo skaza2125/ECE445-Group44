@@ -32,6 +32,10 @@ We received our finished enclosure from the machine shop today. It was very well
 
 We ran into some issues on this, specifically library issues, where the library we wanted to use(LEDC) was deprectated in later versions of our boards firmware, but this was resolved and we continued on. It took trial and error in the parameters of the PWM wave that we were generating, such as figuring out what the ideal PWM frequency and resolution that we needed in order for the fan to accept the PWM signal. Once we got these working, we hooked up the fans, and through manipulating the duty cycle of the outputted PWM wave, we were able to speed up and slow down the fans accordingly. This gave us a great foundation for the speed control that we were aiming to achieve. 
 
+LEDC Code to setup the PWM GPIO pin and generate the signal:
+![image](https://github.com/user-attachments/assets/7ebcde03-91b4-4511-8dac-d1afed247baf)
+
+Examples of two different PWM Waves with Two different Duty Cycles:
 ![thumbnail](https://github.com/user-attachments/assets/485c1546-49c8-4ccd-8ce8-df8d78bf807f)
 
 ![thumbnail](https://github.com/user-attachments/assets/f5f84a51-0428-4ca6-b262-ea0d4957d594)
