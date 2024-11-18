@@ -32,6 +32,11 @@ We received our finished enclosure from the machine shop today. It was very well
 
 We ran into some issues on this, specifically library issues, where the library we wanted to use(LEDC) was deprectated in later versions of our boards firmware, but this was resolved and we continued on. It took trial and error in the parameters of the PWM wave that we were generating, such as figuring out what the ideal PWM frequency and resolution that we needed in order for the fan to accept the PWM signal. Once we got these working, we hooked up the fans, and through manipulating the duty cycle of the outputted PWM wave, we were able to speed up and slow down the fans accordingly. This gave us a great foundation for the speed control that we were aiming to achieve. 
 
+![thumbnail](https://github.com/user-attachments/assets/485c1546-49c8-4ccd-8ce8-df8d78bf807f)
+
+![thumbnail](https://github.com/user-attachments/assets/f5f84a51-0428-4ca6-b262-ea0d4957d594)
+
+
 # November 13th
 On this day we started testing our Nichrome and power supply, we wanted to see if we would generate the amount of heat that we needed in order to make a reasonable and acceptable temperature delta between intake and exhaust temperatures. We had some inital issues with setting up the nichrome and how we would be testing the nichrome. Furthermore we had to figure out a length of nichrome that would heat the wire but not MELT the wire. This was a tough challenge than anticipated, since we had multiple lengths either melt shortly after plugging it in, or on the opposite end, we had some lengths just not heat enough. There were multiple days spent testing this functionality and trying to find the right temperature.
 ![thumbnail](https://github.com/user-attachments/assets/44093f65-f4b6-4061-810b-42fe0a02ac1b)
