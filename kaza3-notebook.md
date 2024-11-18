@@ -38,8 +38,11 @@ We ran into some issues on this, specifically library issues, where the library 
 
 
 # November 13th
-On this day we started testing our Nichrome and power supply, we wanted to see if we would generate the amount of heat that we needed in order to make a reasonable and acceptable temperature delta between intake and exhaust temperatures. We had some inital issues with setting up the nichrome and how we would be testing the nichrome. Furthermore we had to figure out a length of nichrome that would heat the wire but not MELT the wire. This was a tough challenge than anticipated, since we had multiple lengths either melt shortly after plugging it in, or on the opposite end, we had some lengths just not heat enough. There were multiple days spent testing this functionality and trying to find the right temperature.
+On this day we started testing our Nichrome and power supply, we wanted to see if we would generate the amount of heat that we needed in order to make a reasonable and acceptable temperature delta between intake and exhaust temperatures. We had some inital issues with setting up the nichrome and how we would be testing the nichrome. Furthermore we had to figure out a length of nichrome that would heat the wire but not MELT the wire. This was a tough challenge than anticipated, since we had multiple lengths either melt shortly after plugging it in, or on the opposite end, we had some lengths just not heat enough. There were multiple hours spent testing this functionality and trying to find the right temperature.
 ![thumbnail](https://github.com/user-attachments/assets/44093f65-f4b6-4061-810b-42fe0a02ac1b)
 
+![image](https://github.com/user-attachments/assets/f93a1deb-f22f-475f-bcf1-4f65e2680700)
+
+As you can see in this image, this is one of the problems that we ran into. We didnt realize it at the time, but the power from the power supply ended up using the steel as the path of least resistance, and so the nichrome that was making contact with the steel, would not have any current passing through it, instead it would go through the steel itself. This was a huge problem as the steel would often draw more power than the nichrome could handle, which would result in the nichrome ends that were NOT in contact with the steel burning(and melting) cause the contact to be broken. Not only would this break the heating system, it was also HIGHLY unsafe, so we had to come up with an alternative way, or a solution to this contact with the steel.
 
 
