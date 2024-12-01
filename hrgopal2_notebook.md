@@ -38,15 +38,31 @@ Based on some of the feeedback from outside sources on the first PCB design, a s
 
 **Week of 10/28**:
 Both the first and second round PCBs arrived this week, which allowed us to solder a couple components on and allow for testing. We realized that the serial converter system may not be the most reliable, so we backtracked and decided on removing it altogether, having JTAG lines in place of it. Additionally, the ESP32 doesn't seem to need a serial converter and may simply need twin data lines running from the USB-C to the chip, which means we can get rid of it altogether. We may also remove one of the buck converters, since we can route our power externally and disallow too many component being routed on the same board without space for each of the terminal blocks. During this week after our PCB testing, our attention shifted to refining the airflow system, ensuring that the fans effectively pushed heated air through the steel pipe enclosure and vented it under the bed. Testing also included verifying sensor accuracy in capturing temperature variations around our predicted enclosure, mostly making sure that the temperature sensors would work in our environment.
+![image](https://github.com/user-attachments/assets/fff8ba88-73b5-4d7e-8610-09dddeebba8e)
+
 
 **Week of 11/4**:
 We worked on the rework of the PCB this week, taking out one of our power converters and completely removing the serial converter. Our individual progress reports were submitted, documenting each person's contributions so far. The team also began integrating the ESP32 into the system, testing its ability to manage the nichrome wire heating, fan control, and sensor data processing. The temperature sensor didn't seem to be too much of an issue, since the one wire data bus allowed us to put multiple on the same data line without having to worry about splitting off the data line or using separate ones. The fans blow a good amount of CFM, although we may have to consider the noise to airflow ratio. Our heating on the nichrome require a sweet spot that we're yet to find, but it's also taking an immense amount of power, which we're not sure our MOSFET or board can handle if we are to put it directly interfaced.
+![image](https://github.com/user-attachments/assets/de669739-a89c-477b-8af1-214fab02829f)
+![image](https://github.com/user-attachments/assets/2e798c36-b2d8-4b54-bce6-28fa6c7df591)
+
+
 
 **Week of 11/11**:
 Our final round of PCB orders was placed this week after confirming what made our previous designs fail and addressing some minor layout issues. We hope that it'll come soon, since Thanksgiving is coming up and most of us will not be here to test anything or solder anything to boot. The steel pipe enclosure was sent to the machine shop for fabrication, marking a significant milestone in the project's progress. Testing focused on finalizing the heating system and ensuring consistent airflow through the venting system. Our venting system should work quite well, since the air within the enclosure is reliably being pushed out within a smaller space. A couple of calculations were needed to be done for the nichrome, mostly simple V=IR to find out the current running through the wire at any given point. The power supply we're using currently is a 24V 20A power supply which _is_ quite large, but if our calculations are correct, the nichrome is conducting almost 6-8 amps constantly. The resistance is usually about 3.5 amps to allow the nichrome to glow red and seriously dissipate heat. Additionally, we realized that the steel we're wrapping the nichrome around is quite conductive, which foils a couple of our plans of heating it since the nichrome conducts through the steel rather than itself. The steel's resistance is not necessarily _lower_ than the nichrome's, but once enough nichrome is wrapped around the steel, the electricity takes the path of least resistance (usually shorting through the steel and leaving the nichrome unheated). As a result, we've bought Rustoleum, which has properties of both thermal and electrical insulation. In theory, this should insulate the steel pipe and allow it to simply act as a larger surface for the air to pass over and heat more quickly.  
+![image](https://github.com/user-attachments/assets/6d38ba03-4734-4322-bd8e-2e6c59d43db4)
+
 
 **Week of 11/18**:
 The enclosure was received back from the machine shop, allowing the team to assemble the system fully. The final PCB iteration arrived and was soldered, enabling full integration of all components. The ESP32 was successfully flashed with firmware, although our JTAG input didn't work initially due to some solderinig mistakes. The tests demonstrated functionality for nichrome wire heating, airflow control, and temperature monitoring under certain circumstances. The team conducted our mock demo as well, mostly showcasing the enclosure and how hot the nichrome actually got. The system is essentially fully built currently, but our main issue is with the MOSFET that conducts heat through the nichrome wire. The MOSFET is rated for our voltage and power, but it requires a heatsink even for the powers that we are running through it, one that we don't have. While experimenting, we burnt most of these power MOSFETs since the heat travelling through the substrate of the MOSFET was simply too high, conducting 62.5 C/W through Rds. Our calculations yielded a whopping 700C being shunted through our MOSFET, which simply will not work for our purposes. We will instead have to step back and get a relay externally to switch our power into the nichrome, rather than using just the MOSFET as a switch.
+![image](https://github.com/user-attachments/assets/95906402-552d-4da0-a268-0b09dd80be5e)
+![image](https://github.com/user-attachments/assets/5a1c5cee-07b9-43a6-a62e-4de97e3e33cc)
+![image](https://github.com/user-attachments/assets/d6610a46-8f88-4107-a561-31d747f31205)
+
 
 **Week of 11/30**:
 This week involved rigorous testing of the fully assembled system to ensure its reliability. Adjustments were made to fine-tune the PID control for precise temperature management. Final tests confirmed that the system successfully heated and ventilated the bed area as designed. The project is now prepared for the final presentation and evaluation.
+
+https://github.com/user-attachments/assets/5ad44222-92b0-4147-9c3f-b190f8b11859
+
+
