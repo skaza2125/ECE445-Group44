@@ -1,6 +1,6 @@
-# Self-Heating Bed
+# Self-Heating System Project
 
-## Lab Notebook:
+## Lab Notebook: Heating Subsystem Contributions
 
 ### Week of 9/18
 **Initial Project Proposal**
@@ -11,9 +11,10 @@
   - Temperature modulation within 3°F of the setpoint.
   - Noise levels below 60 dB for quiet operation.
   - Energy efficiency within 1000-1500W power consumption.
-
+ 
 Initial System Design: <br/>
 ![image](https://github.com/user-attachments/assets/9f151fe5-813a-4cf1-a9de-f5f05e997b6b)
+
 
 ---
 
@@ -83,8 +84,21 @@ P = \frac{24^2}{3.5} \approx 165 \text{ W}
   - Added safety features for high-current traces and voltage regulators.
   - Verified operation of DS18B20 sensors for precise temperature measurements.
 - Encountered issues with MOSFETs:
-  - MOSFETs overheated due to insufficient Vgs and high Rds.
-  - Replaced MOSFETs with 24V relays for reliable switching of the nichrome wire.
+  - MOSFETs overheated due to insufficient \(V_{GS}\) and high \(R_{DS}\).
+  - Analysis of the \(V_{DS}\) vs. \(I_{D}\) curve revealed operational limits. The MOSFET’s junction-to-ambient thermal resistance \(R_{\text{θJA}}\) and case-to-sink resistance \(R_{\text{θCS}}\) caused rapid temperature rise:
+
+```math
+P_{\text{max}} = 2.8 \text{ W}
+```
+This was insufficient, leading to failure at:
+
+```math
+P_{\text{actual}} = 3.5 \text{ W}
+```
+
+![image](https://github.com/user-attachments/assets/02edd52e-275e-4517-863b-483800d48da4)
+
+- Replaced MOSFETs with 24V relays for reliable switching of the nichrome wire.
 
 **Fried ESP32 Chip:**
 - Damage occurred while adjusting IO/power pins during operation.
