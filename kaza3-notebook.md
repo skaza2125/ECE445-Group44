@@ -78,7 +78,7 @@ Today we started our final assembly of our unit, we worked through the night to 
 
 ![image](https://github.com/user-attachments/assets/f91979b5-6048-43fe-b163-45928f0d40d4)
 
-The final problem that we ran into was that our buck converters kept exploding. In a literal sense. We were not pulling even 1A through the external buck converter, but as shown above, it exploded in our face. This happened twice, with two DIFFERENT buck converter models, so we are unable to narrow down 
+The final problem that we ran into was that our buck converters kept exploding. In a literal sense. We were not pulling even 1A through the external buck converter, but as shown above, it exploded in our face. This happened twice, with two DIFFERENT buck converter models, so we are unable to narrow down why. However when we wired the final buck converter, it seems to work and is stable after running for almost an hour. 
 
 <img width="418" alt="Screenshot 2024-12-12 at 15 13 36" src="https://github.com/user-attachments/assets/d30e02e8-c432-4aa4-be86-edeb6be6df59" />
 
