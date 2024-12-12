@@ -2,6 +2,12 @@
 
 ## Lab Notebook: Heating Subsystem Contributions
 
+### Week of 9/18
+**Initial Project Proposal**
+- Collaboratively brainstormed potential designs for the self-heating system. Focused on integrating a robust heating subsystem with proper ventilation.
+- Prepared the project proposal outlining the main components: a nichrome heating element, steel pipe enclosure, thermistor-based temperature sensing, and a fan-driven ventilation system.
+- Highlighted potential challenges in power management and safety mechanisms, particularly with high-current circuits.
+
 ### Week of 9/25
 **Initial Heating Subsystem Design**
 - Finalized selection of nichrome wire as the primary heating element due to its resistance properties and heat dissipation efficiency.
@@ -62,10 +68,21 @@ Q = m \cdot c \cdot \Delta T
 Where:
 - \(Q\) = heat energy (Joules)
 - \(m\) = mass flow rate of air (kg/s)
-- \(c\) = specific heat capacity of air (1005 J/(kg·K))
+- \(c\) = specific heat capacity of air (1005 J/(kg\cdot K))
 - \(\Delta T\) = temperature difference (measured with thermistors).
 
 - Verified that airflow distribution was even across the steel pipe, ensuring efficient heat transfer and minimal energy loss.
+
+---
+
+### Week of 10/15
+**Challenges with Buck Converters**
+- Decided to relocate the buck converters off-board due to safety and troubleshooting concerns. During testing, 2 out of 3 buck converters failed.
+  - Likely reasons included:
+    - Improper soldering connections leading to voltage spikes.
+    - Insufficient heat sinking, causing thermal runaway.
+    - Inadequate current handling for prolonged operation.
+- Shifted focus to external, pre-tested buck converter modules for stability and reduced risk during subsequent development phases.
 
 ---
 
@@ -81,12 +98,22 @@ Where:
 T_{MOSFET} = R_{\text{ds}} \cdot I^2 + T_{\text{ambient}}
 ```
 Where:
-- \(R_{\text{ds}}\) = thermal resistance (62.5°C/W).
+- \(R_{\text{ds}}\) = thermal resistance (62.5\(^\circ\)C/W).
 - \(I\) = current (6-8 A).
 
-Resulting temperature exceeded 700°C, necessitating the addition of external relays.
+Resulting temperature exceeded 700\(^\circ\)C, necessitating the addition of external relays.
 
 - Improved PCB layout to minimize heat dissipation issues and added external heat sinks for safety.
+
+---
+
+### Week of 10/28
+**Fried ESP Chip During Testing**
+- Encountered an issue where one ESP chip was damaged during a prototyping session.
+  - Likely cause: Adjustments to the IO/Power pins while the system was powered on led to an influx of current, resulting in a short circuit and hardware failure.
+- Implemented strict safety protocols:
+  - Ensure all systems are powered off before making any physical adjustments.
+  - Use current-limiting resistors and diodes to safeguard sensitive components in future designs.
 
 ---
 
@@ -112,7 +139,8 @@ Resulting temperature exceeded 700°C, necessitating the addition of external re
 - Conducted full system testing, recording temperature differences and ensuring even heating distribution.
 - Adjusted nichrome configuration to achieve an optimal balance between power consumption and heating performance.
 
-Final power draw: ```math
+Final power draw:
+```math
 P \approx 150 \text{ W}
 ```
 
