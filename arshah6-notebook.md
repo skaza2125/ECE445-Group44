@@ -1,6 +1,6 @@
 # Self-Heating System Project
 
-## Lab Notebook: Heating Subsystem Contributions
+## Lab Notebook: 
 
 ### Week of 9/18
 **Initial Project Proposal**
@@ -57,24 +57,6 @@ P = \frac{24^2}{3.5} \approx 165 \text{ W}
 
 ---
 
-### Week of 10/10
-**Integration with Ventilation System**
-- Conducted airflow tests to measure temperature differentials across the heating subsystem using thermistors.
-- Calculated heat transfer efficiency using the formula:
-
-```math
-Q = m \cdot c \cdot \Delta T
-```
-Where:
-- \(Q\) = heat energy (Joules)
-- \(m\) = mass flow rate of air (kg/s)
-- \(c\) = specific heat capacity of air (1005 J/(kg\cdot K))
-- \(\Delta T\) = temperature difference (measured with thermistors).
-
-- Verified that airflow distribution was even across the steel pipe, ensuring efficient heat transfer and minimal energy loss.
-
----
-
 ### Week of 10/15
 **Challenges with Buck Converters**
 - Decided to relocate the buck converters off-board due to safety and troubleshooting concerns. During testing, 2 out of 3 buck converters failed.
@@ -86,27 +68,6 @@ Where:
 
 ---
 
-### Week of 10/20
-**PCB Design and Testing**
-- Contributed to the design of the PCB controlling the heating system. Focused on:
-  - Power routing to the nichrome wire via a MOSFET.
-  - Ensuring sufficient spacing to accommodate thermal dissipation.
-
-- Discovered overheating issues with the MOSFET due to insufficient heat sinking. Calculations revealed:
-
-```math
-T_{MOSFET} = R_{\text{ds}} \cdot I^2 + T_{\text{ambient}}
-```
-Where:
-- \(R_{\text{ds}}\) = thermal resistance (62.5\(^\circ\)C/W).
-- \(I\) = current (6-8 A).
-
-Resulting temperature exceeded 700\(^\circ\)C, necessitating the addition of external relays.
-
-- Improved PCB layout to minimize heat dissipation issues and added external heat sinks for safety.
-
----
-
 ### Week of 10/28
 **Fried ESP Chip During Testing**
 - Encountered an issue where one ESP chip was damaged during a prototyping session.
@@ -114,23 +75,6 @@ Resulting temperature exceeded 700\(^\circ\)C, necessitating the addition of ext
 - Implemented strict safety protocols:
   - Ensure all systems are powered off before making any physical adjustments.
   - Use current-limiting resistors and diodes to safeguard sensitive components in future designs.
-
----
-
-### Week of 11/1
-**Final Heating Subsystem Integration**
-- Replaced MOSFET with a mechanical relay to improve heat dissipation and reliability.
-- Soldered and tested the final PCB layout, verifying nichrome heating functionality and consistent temperature control using a basic on/off thermal regulation algorithm.
-
-- Conducted further nichrome wire testing to validate improvements in heating uniformity and efficiency.
-
-**Final Heating Circuit Diagram:**
-```plaintext
-+---------+        +---------+        +---------+
-| Relay   |  --->  | Nichrome|  --->  | Fan     |
-| Control |        | Wire    |        | Output  |
-+---------+        +---------+        +---------+
-```
 
 ---
 
@@ -145,7 +89,15 @@ P \approx 150 \text{ W}
 ```
 
 - Integrated additional safety mechanisms, including temperature cutoffs to prevent overheating.
-- Prepared subsystem for final demonstration, showcasing stable temperature control and efficient airflow.
+
+---
+
+### Week of 12/4
+**Final Integration and Demonstration**
+- Completed assembly of all subsystems into a unified prototype.
+- Verified operation of the nichrome heating subsystem, airflow ventilation, and safety controls during demonstration tests.
+- Collected performance data showing consistent heating within design specifications and minimal energy waste.
+- Presented the fully functional system for evaluation, highlighting design decisions, troubleshooting processes, and final outcomes.
 
 ---
 
@@ -155,6 +107,7 @@ P \approx 150 \text{ W}
 3. Power and thermal calculations for subsystem efficiency.
 4. PCB design, troubleshooting, and integration with ventilation system.
 5. Comprehensive testing and refinement of heating subsystem and airflow dynamics.
+6. Final system integration and demonstration.
 
 **Images:**
 - Annotated circuit diagrams.
