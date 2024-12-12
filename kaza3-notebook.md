@@ -52,6 +52,8 @@ As you can see in this image, this is one of the problems that we ran into. We d
 # Week of November 18th
 We previously realized that the contacting with the steel was a issue that crippled our entire project. This was because instead of the nichrome heating, the current would travel through the steel pipe, therefore nullifying our project. We did research and concluded that due to time constraints getting a new pipe element was not only not feasible, but would also be rather expensive. We then decided to proceed with painting the existing steel rods with a thermally insualtive and electricall non conductive material. We choose Rustoleum bed liner for this application. Furthermore we also decided to start testing with different gauges of nichrome wire. We need to experiment with different gauges of wire so that we can find the optimal setup. One that gets hot enough to heat the air, but also not too hot, so that it melts. We ordered more 18 gauge wire and are waiting for that to appear to start our testing with 18 gauge wire.
 
+Another huge step today was getting our PCB in, we ordered our 4th and final revision and I was able to get all the componenents soldered. We had a couple different changes in this version of the PCB, we swapped to all screw terminals, and added a JTAG connector to flash the ESP controller. This made is easier than soldering the USB-C port onto the PCB. We also did alot of debugging today, since the JTAG connector wasnt working right away, and we needed to tune the baud rate and connection settings to fully get it to communicate. 
+
 # THANKSGIVING BREAK
 Over break, one of our teammates was on campus, and we were working on getting our MOSFET issue resolved. We initially thought that we could use a MOSFET to control our nichrome and turn it on and off, however in our testing, we found that when we pushed the current through the mosfet into the nichrome, after about 10 seconds the MOSFET got either, incredibly hot, or simply exploded. We were not sure at first why this was happening, but after talking with our peers and consulting the data sheet we saw that the on resistance of the mosfet is inversely proportional to the gate voltage. So the ihgher the gate voltage, the lower the resistance of the mosfet. But since we were powering the pin of the mosfet off our ESP, it was only 3.3V, and this meant that the MOSFET had high ON resistance, leading to higher power disapated by the MOSFET, and the MOSFET would explode. This is represented by the equation below. 
 <img width="845" alt="Screenshot 2024-12-12 at 13 39 26" src="https://github.com/user-attachments/assets/539f0b28-22a6-4d31-bd74-aab9d3c95f91" />
@@ -70,6 +72,14 @@ Once we got our relay. we also wanted to test if we could place two nichrome wir
 The coating not only worked to prevent MOST of the shorting of the nichrome, but having two pieces of nichrome in parallel also worked to our benefit, allowing us to power both off the singular 10A relay, controlled via the ESP.
 
 # Monday, December 2nd
+
+Today we started our final assembly of our unit, we worked through the night to get the box assembled, but we ran into many issues. First of all, our PCB randomly broke. we aren't sure why, as our ESP is still outputting signals, but somehow refuses to be programmed. We were unable to debug why the ESP is behaving this way, so we ended up having to solder a brand new PCB. However because today is the day before our demo, we do not have the componenets to solder on the integrated PCB buck converter onto the system, so we ended up having to use external power converters in order to power certain aspects of the PCB, like the 12V fans. However, once we soldered everything on, we tested the ESP and saw that it was accepted our code, as well as succesfully reading out of our sensor, so we had a working PCB, and went on to final PCB Assembly.
+
+
+![image](https://github.com/user-attachments/assets/f91979b5-6048-43fe-b163-45928f0d40d4)
+
+<img width="418" alt="Screenshot 2024-12-12 at 15 13 36" src="https://github.com/user-attachments/assets/d30e02e8-c432-4aa4-be86-edeb6be6df59" />
+
 
 
 
