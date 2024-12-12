@@ -72,7 +72,7 @@ T \propto \frac{V^2}{L^2}
 
 ![image](https://github.com/user-attachments/assets/c8e9f717-bd96-44bc-9f62-8049b563e98f)
 
-**PCB Converter Designs** <br/>
+**PCB Buck Converter Designs (ON-BOARD)** <br/>
 ![image](https://github.com/user-attachments/assets/de2efc15-aa8f-40c6-bff5-a8827c952db6)
 
 
@@ -139,19 +139,13 @@ P_{\text{actual}} = 3.5 \text{ W}
 
 - Replaced MOSFETs with 24V relays for reliable switching of the nichrome wire.
 
-Circuit Model of Nichrome and relay: <br/>
+Circuit Model of Nichrome and relay (modeled as switch): <br/>
 ![image](https://github.com/user-attachments/assets/d50655b0-eef8-450e-bc92-b6eba6355b1a)
 
 
 **ESP Flashing Setup**
 - Due to issues soldering and setting up serial converter and USB-C connecter we switched over to a more standard flashing setup to be able to program the ESP. <br/>
 ![image](https://github.com/user-attachments/assets/697743f4-69e3-42ec-b90d-db83ebb654b8)
-
-**Fried ESP32 Chip:**
-- Damage occurred while adjusting IO/power pins during operation. This led to us having to resolder a new PCB entirely. 
-- However this time we implemented safety measures to make sure we didnt fry another ESP:
-  - Powered down all systems before modifications.
-  - Added current-limiting resistors.
 
 ---
 
@@ -188,6 +182,13 @@ P \approx 253.1 \text{ W}
   <img src="https://github.com/user-attachments/assets/2dbd25d9-3b6e-4a38-8aae-30cdd4b3bca9" alt="image" width="30%">
   <img src="https://github.com/user-attachments/assets/6bbb6b6b-f668-4def-b535-79247e8522cd" alt="image" width="30%">
 </p>
+
+**Fried ESP32 Chip:**
+- We somehow during assembly fried our ESP as well two of our external Buck Converters
+- Damage occurred while adjusting IO/power pins during operation. This led to us having to resolder a new PCB entirely. 
+- However this time we implemented safety measures to make sure we didnt fry another ESP:
+  - Powered down all systems before modifications.
+  - Added current-limiting resistors.
 
 
 ---
