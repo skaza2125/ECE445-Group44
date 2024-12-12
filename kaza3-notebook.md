@@ -82,6 +82,10 @@ The final problem that we ran into was that our buck converters kept exploding. 
 
 <img width="418" alt="Screenshot 2024-12-12 at 15 13 36" src="https://github.com/user-attachments/assets/d30e02e8-c432-4aa4-be86-edeb6be6df59" />
 
+We were able to get the final project working, and meet all of our high level requirements. The project was incredibly fun and I enjoyed working with my teammates, as well as learning alot about the various aspects of electrical, thermal, and firmware engineering!
+
+![image](https://github.com/user-attachments/assets/1b59f8bf-4f0b-4e46-9687-42c233d38076)
+
 
 
 
