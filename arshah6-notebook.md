@@ -12,6 +12,9 @@
   - Noise levels below 60 dB for quiet operation.
   - Energy efficiency within 1000-1500W power consumption.
 
+Initial System Design: <br/>
+![image](https://github.com/user-attachments/assets/9f151fe5-813a-4cf1-a9de-f5f05e997b6b)
+
 ---
 
 ### Week of 9/25
@@ -92,6 +95,8 @@ This was insufficient, leading to failure at:
 P_{\text{actual}} = 3.5 \text{ W}
 ```
 
+![image](https://github.com/user-attachments/assets/02edd52e-275e-4517-863b-483800d48da4)
+
 - Replaced MOSFETs with 24V relays for reliable switching of the nichrome wire.
 
 **Fried ESP32 Chip:**
@@ -132,7 +137,7 @@ P \approx 150 \text{ W}
 
 ---
 
-**Key Contributions:**
+**Key Completion Points:**
 1. Developed and optimized the nichrome heating subsystem.
 2. Designed a robust ventilation system with PWM-controlled fans.
 3. Overcame PCB design challenges, ensuring safety and reliability.
