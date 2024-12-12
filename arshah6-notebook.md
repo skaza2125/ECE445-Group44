@@ -7,17 +7,17 @@
 - Finalized selection of nichrome wire as the primary heating element due to its resistance properties and heat dissipation efficiency.
 - Calculated the required power (Φ) to heat the nichrome effectively using:
 
-  \[
-  P = V^2 / R
-  \]
-  Where:
-  - \(V\) is the voltage supplied by a 24V, 20A power supply.
-  - \(R\) (measured resistance of the nichrome wire) = ~3.5 Ω.
+```math
+P = \frac{V^2}{R}
+```
+Where:
+- \(V\) is the voltage supplied by a 24V, 20A power supply.
+- \(R\) (measured resistance of the nichrome wire) = ~3.5 Ω.
 
-  Resulting in:
-  \[
-  P = \frac{24^2}{3.5} \approx 165 \text{ W}
-  \]
+Resulting in:
+```math
+P = \frac{24^2}{3.5} \approx 165 \text{ W}
+```
 
 - Determined optimal nichrome length to balance between overheating and insufficient heating.
 
@@ -26,8 +26,20 @@
 ### Week of 10/2
 **Prototyping the Heating System**
 - Began testing nichrome wire configurations by wrapping it around a steel pipe to enhance heat transfer to airflow.
-- Encountered significant issues with electrical shorts caused by direct contact between the nichrome and conductive steel pipe. This led to uneven current distribution, reducing heating efficiency.
-- Proposed the use of **Rust-Oleum insulating spray** to thermally insulate the steel pipe and prevent electrical conduction through the pipe.
+- Experimented with various nichrome gauges and lengths to identify optimal heating performance without overheating or insufficient heating. Below are key test results:
+
+| Gauge | Length (cm) | Res. (Ω) | Heat | Melted? | Amps  | Power (W) |
+|-------|-------------|-----------|------|---------|-------|-----------|
+| 18    | 106         | 2.3       | Yes  | No      | 10.43 | 250.43    |
+| 18    | 54          | 0.94      | Yes  | Yes     | 20    | 376       |
+| 18    | 24          | 0.33      | Yes  | Yes     | 20    | 132       |
+| 24    | 45          | 1.6       | Yes  | No      | 10.62 | 254.88    |
+| 24    | 54          | 3.1       | Yes  | Yes*    | 7.74  | 185.81    |
+| 24    | 106         | 5.83      | Yes* | No      | 4.12  | 98.80     |
+
+(*Notes: "Yes*" indicates partial melting occurred or required additional insulation adjustments.)
+
+- Proposed the use of **Rust-Oleum insulating spray** to thermally insulate the steel pipe and prevent electrical conduction through the pipe, which was causing shorts during initial tests.
 
 **Diagram of Initial Heating Setup:**
 ```plaintext
@@ -44,14 +56,16 @@
 - Conducted airflow tests to measure temperature differentials across the heating subsystem using thermistors.
 - Calculated heat transfer efficiency using the formula:
 
-  \[
-  Q = m \cdot c \cdot \Delta T
-  \]
-  Where:
-  - \(Q\) = heat energy (Joules)
-  - \(m\) = mass flow rate of air (kg/s)
-  - \(c\) = specific heat capacity of air (1005 J/(kg·K))
-  - \(\Delta T\) = temperature difference (measured with thermistors).
+```math
+Q = m \cdot c \cdot \Delta T
+```
+Where:
+- \(Q\) = heat energy (Joules)
+- \(m\) = mass flow rate of air (kg/s)
+- \(c\) = specific heat capacity of air (1005 J/(kg·K))
+- \(\Delta T\) = temperature difference (measured with thermistors).
+
+- Verified that airflow distribution was even across the steel pipe, ensuring efficient heat transfer and minimal energy loss.
 
 ---
 
@@ -63,14 +77,16 @@
 
 - Discovered overheating issues with the MOSFET due to insufficient heat sinking. Calculations revealed:
 
-  \[
-  T_{MOSFET} = R_{\text{ds}} \cdot I^2 + T_{\text{ambient}}
-  \]
-  Where:
-  - \(R_{\text{ds}}\) = thermal resistance (62.5°C/W).
-  - \(I\) = current (6-8 A).
+```math
+T_{MOSFET} = R_{\text{ds}} \cdot I^2 + T_{\text{ambient}}
+```
+Where:
+- \(R_{\text{ds}}\) = thermal resistance (62.5°C/W).
+- \(I\) = current (6-8 A).
 
-  Resulting temperature exceeded 700°C, necessitating the addition of external relays.
+Resulting temperature exceeded 700°C, necessitating the addition of external relays.
+
+- Improved PCB layout to minimize heat dissipation issues and added external heat sinks for safety.
 
 ---
 
@@ -78,6 +94,8 @@
 **Final Heating Subsystem Integration**
 - Replaced MOSFET with a mechanical relay to improve heat dissipation and reliability.
 - Soldered and tested the final PCB layout, verifying nichrome heating functionality and consistent temperature control using a basic on/off thermal regulation algorithm.
+
+- Conducted further nichrome wire testing to validate improvements in heating uniformity and efficiency.
 
 **Final Heating Circuit Diagram:**
 ```plaintext
@@ -94,21 +112,23 @@
 - Conducted full system testing, recording temperature differences and ensuring even heating distribution.
 - Adjusted nichrome configuration to achieve an optimal balance between power consumption and heating performance.
 
-  Final power draw: \(P \approx 150 \text{ W}\).
+Final power draw: ```math
+P \approx 150 \text{ W}
+```
 
+- Integrated additional safety mechanisms, including temperature cutoffs to prevent overheating.
 - Prepared subsystem for final demonstration, showcasing stable temperature control and efficient airflow.
 
 ---
 
 **Key Contributions:**
-1. Nichrome wire selection and length optimization.
-2. Insulation design to prevent electrical shorts.
+1. Nichrome wire selection, length optimization, and testing across multiple configurations.
+2. Insulation design to prevent electrical shorts and improve safety.
 3. Power and thermal calculations for subsystem efficiency.
-4. PCB design and integration with ventilation system.
-5. Testing and refinement of thermal performance.
+4. PCB design, troubleshooting, and integration with ventilation system.
+5. Comprehensive testing and refinement of heating subsystem and airflow dynamics.
 
 **Images:**
 - Annotated circuit diagrams.
 - Thermal test setups.
 - Final assembled system.
-
