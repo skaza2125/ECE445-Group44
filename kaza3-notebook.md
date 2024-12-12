@@ -57,4 +57,19 @@ Over break, one of our teammates was on campus, and we were working on getting o
 <img width="845" alt="Screenshot 2024-12-12 at 13 39 26" src="https://github.com/user-attachments/assets/539f0b28-22a6-4d31-bd74-aab9d3c95f91" />
 
 <img width="426" alt="Screenshot 2024-12-12 at 13 36 04" src="https://github.com/user-attachments/assets/0c8c9f4a-e966-4003-8083-8b1965b1b505" />
+
 When we were testing in the lab, we realized that if we powered the MOSFET via 10V, the MOSFEt would no burn anymore, but it would get incredibly hot. After discussion, we decided that since we did not need the incredibly high switching rate that the MOSFET provided, we could instead swap to a physical relay switch that would be controlled via a IO signal from our ESP32 Module. THis allowed us to push the same amount of power through the nichrome, without worrying about the temperature of the MOSFET and the ineffeciency of adding even more buck converters to step down 24V to 10V to power the mosfet.
+
+![image](https://github.com/user-attachments/assets/3dfc2c87-2b25-419c-8a3e-bfeb3f933a4a)
+
+
+Once we got our relay. we also wanted to test if we could place two nichrome wires in parallel, in order to split the same amount of power through them, and cause an overall increase in heating, we tested this outside of the enclosure with our nichrome wrapped around our freshly coated steel rods, as you can see, in this photo they are now black, as a result of the rustoleum coating that we applied. 
+
+<img width="697" alt="Screenshot 2024-12-12 at 13 43 35" src="https://github.com/user-attachments/assets/f9d2fb68-8a59-471b-9b5d-255f7f07477b" />
+
+The coating not only worked to prevent MOST of the shorting of the nichrome, but having two pieces of nichrome in parallel also worked to our benefit, allowing us to power both off the singular 10A relay, controlled via the ESP.
+
+# Monday, December 2nd
+
+
+
