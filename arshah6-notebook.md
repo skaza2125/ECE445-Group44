@@ -36,6 +36,16 @@ P = \frac{24^2}{3.5} \approx 165 \text{ W}
 
 - Tested initial nichrome lengths and gauges, refining configurations through iterative testing.
 - Decided on nichrome-80 as the material for its high-temperature resistance and mechanical flexibility.
+  
+---
+
+### Week of 10/15
+**Ventilation System Implementation**
+- Integrated PWM-controlled fans to manage airflow through the steel pipes.
+- Developed a 6-stage PWM curve for dynamic fan speed adjustment:
+  - Optimized exhaust temperatures while minimizing noise levels.
+  - Verified airflow with thermistors, achieving a 28°F temperature delta.
+- Used oscilloscope to calibrate PWM signal parameters for the fans.
 
 ---
 
@@ -70,16 +80,6 @@ Shorts Observed with just Nichrome and Steel Rod Setup: <br/>
 ```
 Final Setup: <br/>
 <img width="697" alt="Screenshot 2024-12-12 at 13 43 35" src="https://github.com/user-attachments/assets/f9d2fb68-8a59-471b-9b5d-255f7f07477b" />
-
----
-
-### Week of 10/15
-**Ventilation System Implementation**
-- Integrated PWM-controlled fans to manage airflow through the steel pipes.
-- Developed a 6-stage PWM curve for dynamic fan speed adjustment:
-  - Optimized exhaust temperatures while minimizing noise levels.
-  - Verified airflow with thermistors, achieving a 28°F temperature delta.
-- Used oscilloscope to calibrate PWM signal parameters for the fans.
 
 ---
 
@@ -144,6 +144,13 @@ P \approx 253.1 \text{ W}
 - Suggested future improvements:
   - Use of infrared heating panels to improve efficiency.
   - Replace metal enclosures with ABS plastic to reduce thermal losses.
+ 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/57d78a47-3e5d-4775-9636-e9b2c6cdfb35" alt="image" width="30%">
+  <img src="https://github.com/user-attachments/assets/2dbd25d9-3b6e-4a38-8aae-30cdd4b3bca9" alt="image" width="30%">
+  <img src="https://github.com/user-attachments/assets/6bbb6b6b-f668-4def-b535-79247e8522cd" alt="image" width="30%">
+</p>
+
 
 ---
 
