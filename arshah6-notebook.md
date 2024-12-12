@@ -13,7 +13,9 @@
   - Energy efficiency within 1000-1500W power consumption.
 
 Initial System Design: <br/>
+
 ![image](https://github.com/user-attachments/assets/9f151fe5-813a-4cf1-a9de-f5f05e997b6b)
+
 ![391298115-f80e0a53-0fac-49a9-810d-9f68b52080c1](https://github.com/user-attachments/assets/eaf703ff-0ffd-4166-a0eb-3f58c4f590f4)
 
 
@@ -40,7 +42,9 @@ P = \frac{24^2}{3.5} \approx 165 \text{ W}
 - Decided on nichrome-80 as the material for its high-temperature resistance and mechanical flexibility.
 
 **Mathematical Analysis of Heating Subsystem**
+
 ![image](https://github.com/user-attachments/assets/4a13d0ab-77e4-408e-877e-d64bf59d233f)
+
 - To better understand the relationship between key parameters, the temperature rise \(\Delta T\) of the nichrome wire was derived as:
 
 
@@ -73,6 +77,7 @@ T \propto \frac{V^2}{L^2}
 ![image](https://github.com/user-attachments/assets/c8e9f717-bd96-44bc-9f62-8049b563e98f)
 
 **PCB Buck Converter Designs (ON-BOARD)** <br/>
+
 ![image](https://github.com/user-attachments/assets/de2efc15-aa8f-40c6-bff5-a8827c952db6)
 
 
@@ -97,9 +102,11 @@ T \propto \frac{V^2}{L^2}
 (*Notes: "Yes*" indicates partial melting occurred or required additional insulation adjustments.)
 
 Shorts Observed with just Nichrome and Steel Rod Setup: <br/>
+
 ![387073037-f93a1deb-f22f-475f-bcf1-4f65e2680700](https://github.com/user-attachments/assets/a5ad7987-359a-41b6-bf7f-6be9cbb07784)
 
 Coating with Rust-Oleum - FUN! :) :
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/8ac962e9-ccce-497c-9036-e3d0f251bd03" alt="WhatsApp Image" width="60%">
 </p>
@@ -113,6 +120,7 @@ Coating with Rust-Oleum - FUN! :) :
 +---------+        +---------+        +---------+
 ```
 Final Setup: <br/>
+
 <img width="697" alt="Screenshot 2024-12-12 at 13 43 35" src="https://github.com/user-attachments/assets/f9d2fb68-8a59-471b-9b5d-255f7f07477b" />
 
 ---
@@ -140,11 +148,13 @@ P_{\text{actual}} = 3.5 \text{ W}
 - Replaced MOSFETs with 24V relays for reliable switching of the nichrome wire.
 
 Circuit Model of Nichrome and relay (modeled as switch): <br/>
+
 ![image](https://github.com/user-attachments/assets/d50655b0-eef8-450e-bc92-b6eba6355b1a)
 
 
 **ESP Flashing Setup**
 - Due to issues soldering and setting up serial converter and USB-C connecter we switched over to a more standard flashing setup to be able to program the ESP. <br/>
+
 ![image](https://github.com/user-attachments/assets/697743f4-69e3-42ec-b90d-db83ebb654b8)
 
 ---
