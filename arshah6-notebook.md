@@ -12,7 +12,7 @@
   - Noise levels below 60 dB for quiet operation.
   - Energy efficiency within 1000-1500W power consumption.
 
-Initial System Design:
+Initial System Design: <br/>
 ![image](https://github.com/user-attachments/assets/9f151fe5-813a-4cf1-a9de-f5f05e997b6b)
 
 ---
