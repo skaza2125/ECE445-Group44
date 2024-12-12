@@ -70,6 +70,12 @@ T \propto \frac{V^2}{L^2}
   - Verified airflow with thermistors, achieving a 28°F temperature delta.
 - Used oscilloscope to calibrate PWM signal parameters for the fans.
 
+![image](https://github.com/user-attachments/assets/c8e9f717-bd96-44bc-9f62-8049b563e98f)
+
+**PCB Converter Designs**
+![image](https://github.com/user-attachments/assets/de2efc15-aa8f-40c6-bff5-a8827c952db6)
+
+
 ---
 
 ### Week of 11/2
@@ -93,8 +99,11 @@ T \propto \frac{V^2}{L^2}
 Shorts Observed with just Nichrome and Steel Rod Setup: <br/>
 ![387073037-f93a1deb-f22f-475f-bcf1-4f65e2680700](https://github.com/user-attachments/assets/a5ad7987-359a-41b6-bf7f-6be9cbb07784)
 
-Coating with Rust-Oleum:
-![WhatsApp Image 2024-12-12 at 15 03 01_83aaec39](https://github.com/user-attachments/assets/8ac962e9-ccce-497c-9036-e3d0f251bd03)
+Coating with Rust-Oleum - FUN! :) :
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8ac962e9-ccce-497c-9036-e3d0f251bd03" alt="WhatsApp Image" width="60%">
+</p>
+
 
 **Diagram of Heating Setup:**
 ```plaintext
@@ -133,6 +142,10 @@ P_{\text{actual}} = 3.5 \text{ W}
 Circuit Model of Nichrome and relay: <br/>
 ![image](https://github.com/user-attachments/assets/d50655b0-eef8-450e-bc92-b6eba6355b1a)
 
+
+**ESP Flashing Setup**
+- Due to issues soldering and setting up serial converter and USB-C connecter we switched over to a more standard flashing setup to be able to program the ESP.
+![image](https://github.com/user-attachments/assets/697743f4-69e3-42ec-b90d-db83ebb654b8)
 
 **Fried ESP32 Chip:**
 - Damage occurred while adjusting IO/power pins during operation. This led to us having to resolder a new PCB entirely. 
