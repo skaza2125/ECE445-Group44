@@ -14,6 +14,8 @@
 
 Initial System Design: <br/>
 ![image](https://github.com/user-attachments/assets/9f151fe5-813a-4cf1-a9de-f5f05e997b6b)
+![391298115-f80e0a53-0fac-49a9-810d-9f68b52080c1](https://github.com/user-attachments/assets/eaf703ff-0ffd-4166-a0eb-3f58c4f590f4)
+
 
 ---
 
@@ -38,15 +40,17 @@ P = \frac{24^2}{3.5} \approx 165 \text{ W}
 - Decided on nichrome-80 as the material for its high-temperature resistance and mechanical flexibility.
 
 **Mathematical Analysis of Heating Subsystem**
+![image](https://github.com/user-attachments/assets/4a13d0ab-77e4-408e-877e-d64bf59d233f)
 - To better understand the relationship between key parameters, the temperature rise \(\Delta T\) of the nichrome wire was derived as:
+
 
 ```math
 \Delta T = \theta \cdot \frac{V^2}{\rho L^2}
 ```
 Where:
-- ρ: Resistivity (or resistance per unit length).
+- (ρ): Resistivity (or resistance per unit length).
 - \(L\): Length of the wire.
-- θ: Radial thermal resistance of the wire to ambient (a constant).
+- (θ): Radial thermal resistance of the wire to ambient (a constant).
 
 - This formula indicates that the temperature increase is proportional to the square of the applied voltage and inversely proportional to the square of the wire length:
 
@@ -89,6 +93,8 @@ T \propto \frac{V^2}{L^2}
 Shorts Observed with just Nichrome and Steel Rod Setup: <br/>
 ![387073037-f93a1deb-f22f-475f-bcf1-4f65e2680700](https://github.com/user-attachments/assets/a5ad7987-359a-41b6-bf7f-6be9cbb07784)
 
+Coating with Rust-Oleum:
+![WhatsApp Image 2024-12-12 at 15 03 01_83aaec39](https://github.com/user-attachments/assets/8ac962e9-ccce-497c-9036-e3d0f251bd03)
 
 **Diagram of Heating Setup:**
 ```plaintext
@@ -102,7 +108,7 @@ Final Setup: <br/>
 
 ---
 
-### Week of 11/28
+### Week of 11/15
 **PCB Design Challenges**
 - Designed PCB to integrate power delivery and sensor interfaces:
   - Added safety features for high-current traces and voltage regulators.
@@ -136,7 +142,7 @@ Circuit Model of Nichrome and relay: <br/>
 
 ---
 
-### Week of 11/15
+### Week of 11/28
 **System Testing and Optimization**
 - Conducted end-to-end testing of all subsystems:
   - Measured exhaust and ambient temperatures, ensuring safe operating limits.
@@ -151,7 +157,7 @@ P \approx 253.1 \text{ W}
 
 ---
 
-### Week of 12/4
+### Week of 12/2
 **Final Integration and Demonstration**
 - Assembled the final system:
   - Unified heating, ventilation, and control subsystems.
@@ -181,10 +187,6 @@ P \approx 253.1 \text{ W}
 5. Established safety protocols to prevent hardware failures.
 6. Demonstrated a fully functional prototype meeting all requirements.
 
-**Images:**
-- Annotated circuit diagrams.
-- PWM fan calibration curves.
-- Final system assembly.
 
 ---
 
