@@ -72,7 +72,7 @@ T \propto \frac{V^2}{L^2}
 
 ![image](https://github.com/user-attachments/assets/c8e9f717-bd96-44bc-9f62-8049b563e98f)
 
-**PCB Converter Designs**
+**PCB Converter Designs** <br/>
 ![image](https://github.com/user-attachments/assets/de2efc15-aa8f-40c6-bff5-a8827c952db6)
 
 
@@ -124,7 +124,7 @@ Final Setup: <br/>
   - Verified operation of DS18B20 sensors for precise temperature measurements.
 - Encountered issues with MOSFETs:
   - MOSFETs overheated due to insufficient gate-to-source voltage (V_GS) and high drain-to-source resistance (R_DS).
-  - Analysis of the drain-to-source voltage (V_DS)​ vs. drain current (I_D)​ curve revealed operational limits. The MOSFET’s junction-to-ambient thermal resistance RθJARθJA​ and case-to-sink resistance RθCSRθCS​ caused rapid temperature rise:
+  - Analysis of the drain-to-source voltage (V_DS)​ vs. drain current (I_D)​ curve revealed operational limits. The MOSFET’s junction-to-ambient thermal resistance Rθ_jA​ and case-to-sink resistance Rθ_CS caused rapid temperature rise:
 
 ```math
 P_{\text{max}} = 2.8 \text{ W}
