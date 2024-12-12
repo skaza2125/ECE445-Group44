@@ -117,14 +117,14 @@ Final Setup: <br/>
 
 ---
 
-### Week of 11/15
+### Week of 11/15 (Some during thanksgiving break)
 **PCB Design Challenges**
 - Designed PCB to integrate power delivery and sensor interfaces:
   - Added safety features for high-current traces and voltage regulators.
   - Verified operation of DS18B20 sensors for precise temperature measurements.
 - Encountered issues with MOSFETs:
-  - MOSFETs overheated due to insufficient gate-to-source voltage \(V_{GS}\) and high drain-to-source resistance \(R_{DS}\).
-  - Analysis of the drain-to-source voltage \(V_{DS}\) vs. drain current \(I_{D}\) curve revealed operational limits. The MOSFET’s junction-to-ambient thermal resistance \(R_{\text{θJA}}\) and case-to-sink resistance \(R_{\text{θCS}}\) caused rapid temperature rise:
+  - MOSFETs overheated due to insufficient gate-to-source voltage (V_GS) and high drain-to-source resistance (R_DS).
+  - Analysis of the drain-to-source voltage (V_DS)​ vs. drain current (I_D)​ curve revealed operational limits. The MOSFET’s junction-to-ambient thermal resistance RθJARθJA​ and case-to-sink resistance RθCSRθCS​ caused rapid temperature rise:
 
 ```math
 P_{\text{max}} = 2.8 \text{ W}
@@ -144,7 +144,7 @@ Circuit Model of Nichrome and relay: <br/>
 
 
 **ESP Flashing Setup**
-- Due to issues soldering and setting up serial converter and USB-C connecter we switched over to a more standard flashing setup to be able to program the ESP.
+- Due to issues soldering and setting up serial converter and USB-C connecter we switched over to a more standard flashing setup to be able to program the ESP. <br/>
 ![image](https://github.com/user-attachments/assets/697743f4-69e3-42ec-b90d-db83ebb654b8)
 
 **Fried ESP32 Chip:**
@@ -155,7 +155,7 @@ Circuit Model of Nichrome and relay: <br/>
 
 ---
 
-### Week of 11/28
+### Week of 11/25 (Thanksgiving Break)
 **System Testing and Optimization**
 - Conducted end-to-end testing of all subsystems:
   - Measured exhaust and ambient temperatures, ensuring safe operating limits.
