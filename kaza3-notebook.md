@@ -30,6 +30,11 @@ Today we submitted our SMD orders to both the supply shop and on DigiKey. At thi
 # November 11th+12th
 We received our finished enclosure from the machine shop today. It was very well made, and it adhered to our specifications. We realized we had overlooked certain aspects, such as a hole to route the nichrome into the enclosure, since the PCB itself would be on the external sides of the box. This meant that we needed to drill an additional hole. Now that we had our fans back, we started on getting the fans powered, so that we can start getting an idea of the airflow that we would generate, and if the fans were going to be enough. We had many issues when were diagnosing the fans and we consulted our TA on these issues as well. The first issue is that our fans were 12V fans, but for some reason when they were powered from the bench top power supplies, the fans would drop to 6V. We spent alot of time debugging this issue, and eventually found a solution, but not an answer to the intial problem. When we powered the fans off the PSU that was incldued in our lab supply kits, we did not experience as severe of a voltage drop issue. Though the voltage dropped a little bit, this is to be expected, it still stayed near the operating voltage of the fan.
 
+<img width="408" alt="Screenshot 2024-12-10 at 22 52 26" src="https://github.com/user-attachments/assets/3fa9a87a-0688-4dd4-b791-1340ea53c867" />
+
+
+
+
 We ran into some issues on this, specifically library issues, where the library we wanted to use(LEDC) was deprectated in later versions of our boards firmware, but this was resolved and we continued on. It took trial and error in the parameters of the PWM wave that we were generating, such as figuring out what the ideal PWM frequency and resolution that we needed in order for the fan to accept the PWM signal. Once we got these working, we hooked up the fans, and through manipulating the duty cycle of the outputted PWM wave, we were able to speed up and slow down the fans accordingly. This gave us a great foundation for the speed control that we were aiming to achieve. 
 
 LEDC Code to setup the PWM GPIO pin and generate the signal:
