@@ -36,7 +36,26 @@ P = \frac{24^2}{3.5} \approx 165 \text{ W}
 
 - Tested initial nichrome lengths and gauges, refining configurations through iterative testing.
 - Decided on nichrome-80 as the material for its high-temperature resistance and mechanical flexibility.
-  
+
+**Mathematical Analysis of Heating Subsystem**
+- To better understand the relationship between key parameters, the temperature rise \(\Delta T\) of the nichrome wire was derived as:
+
+```math
+\Delta T = \theta \cdot \frac{V^2}{\rho L^2}
+```
+Where:
+- \(\rho\): Resistivity (or resistance per unit length).
+- \(L\): Length of the wire.
+- \(\theta\): Radial thermal resistance of the wire to ambient (a constant).
+
+- This formula indicates that the temperature increase is proportional to the square of the applied voltage and inversely proportional to the square of the wire length:
+
+```math
+T \propto \frac{V^2}{L^2}
+```
+
+- This relationship guided the selection of wire lengths and voltages for balancing efficiency and safety, ensuring proper heat dissipation.
+
 ---
 
 ### Week of 10/15
