@@ -73,12 +73,15 @@ The coating not only worked to prevent MOST of the shorting of the nichrome, but
 
 # Monday, December 2nd
 
-Today we started our final assembly of our unit, we worked through the night to get the box assembled, but we ran into many issues. First of all, our PCB randomly broke. we aren't sure why, as our ESP is still outputting signals, but somehow refuses to be programmed. We were unable to debug why the ESP is behaving this way, so we ended up having to solder a brand new PCB. However because today is the day before our demo, we do not have the componenets to solder on the integrated PCB buck converter onto the system, so we ended up having to use external power converters in order to power certain aspects of the PCB, like the 12V fans. However, once we soldered everything on, we tested the ESP and saw that it was accepted our code, as well as succesfully reading out of our sensor, so we had a working PCB, and went on to final PCB Assembly.
+Today we started our final assembly of our unit, we worked through the night to get the box assembled, but we ran into many issues. First of all, our PCB randomly broke. we aren't sure why, as our ESP is still outputting signals, but somehow refuses to be programmed. We were unable to debug why the ESP is behaving this way, so we ended up having to solder a brand new PCB. However because today is the day before our demo, we do not have the componenets to solder on the integrated PCB buck converter onto the system, so we ended up having to use external power converters in order to power certain aspects of the PCB, like the 12V fans. However, once we soldered everything on, we tested the ESP and saw that it was accepted our code, as well as succesfully reading out of our sensor, so we had a working PCB, and went on to final PCB Assembly. 
 
 
 ![image](https://github.com/user-attachments/assets/f91979b5-6048-43fe-b163-45928f0d40d4)
 
+The final problem that we ran into was that our buck converters kept exploding. In a literal sense. We were not pulling even 1A through the external buck converter, but as shown above, it exploded in our face. This happened twice, with two DIFFERENT buck converter models, so we are unable to narrow down 
+
 <img width="418" alt="Screenshot 2024-12-12 at 15 13 36" src="https://github.com/user-attachments/assets/d30e02e8-c432-4aa4-be86-edeb6be6df59" />
+
 
 
 
