@@ -39,7 +39,7 @@ P = \frac{24^2}{3.5} \approx 165 \text{ W}
 
 ---
 
-### Week of 10/2
+### Week of 11/2
 **Heating System Prototyping**
 - Wrapped nichrome wire around steel pipes to serve as heating elements.
 - Performed tests to balance heating efficiency and safety:
@@ -57,6 +57,10 @@ P = \frac{24^2}{3.5} \approx 165 \text{ W}
 
 (*Notes: "Yes*" indicates partial melting occurred or required additional insulation adjustments.)
 
+Shorts Observed with just Nichrome and Steel Rod Setup: <br/>
+![387073037-f93a1deb-f22f-475f-bcf1-4f65e2680700](https://github.com/user-attachments/assets/a5ad7987-359a-41b6-bf7f-6be9cbb07784)
+
+
 **Diagram of Heating Setup:**
 ```plaintext
 +---------+        +---------+        +---------+
@@ -64,6 +68,8 @@ P = \frac{24^2}{3.5} \approx 165 \text{ W}
 | Wire    |        | Pipe    |        | Airflow |
 +---------+        +---------+        +---------+
 ```
+Final Setup: <br/>
+<img width="697" alt="Screenshot 2024-12-12 at 13 43 35" src="https://github.com/user-attachments/assets/f9d2fb68-8a59-471b-9b5d-255f7f07477b" />
 
 ---
 
@@ -77,7 +83,7 @@ P = \frac{24^2}{3.5} \approx 165 \text{ W}
 
 ---
 
-### Week of 10/28
+### Week of 11/28
 **PCB Design Challenges**
 - Designed PCB to integrate power delivery and sensor interfaces:
   - Added safety features for high-current traces and voltage regulators.
@@ -99,11 +105,15 @@ P_{\text{actual}} = 3.5 \text{ W}
 
 - Replaced MOSFETs with 24V relays for reliable switching of the nichrome wire.
 
+Circuit Model of Nichrome and relay: <br/>
+![image](https://github.com/user-attachments/assets/d50655b0-eef8-450e-bc92-b6eba6355b1a)
+
+
 **Fried ESP32 Chip:**
-- Damage occurred while adjusting IO/power pins during operation.
-- Implemented safety measures:
+- Damage occurred while adjusting IO/power pins during operation. This led to us having to resolder a new PCB entirely. 
+- However this time we implemented safety measures to make sure we didnt fry another ESP:
   - Powered down all systems before modifications.
-  - Added current-limiting resistors and flyback diodes.
+  - Added current-limiting resistors.
 
 ---
 
@@ -115,7 +125,7 @@ P_{\text{actual}} = 3.5 \text{ W}
 - Power consumption stabilized at:
 
 ```math
-P \approx 150 \text{ W}
+P \approx 253.1 \text{ W}
 ```
 
 - Demonstrated compliance with noise and energy efficiency requirements.
@@ -129,7 +139,7 @@ P \approx 150 \text{ W}
   - Verified operation under simulated user scenarios.
 - Presented final prototype, achieving:
   - Temperature modulation within ±3°F.
-  - Energy consumption under 400W.
+  - Energy consumption under 600W.
   - Noise levels measured at 55 dB during operation.
 - Suggested future improvements:
   - Use of infrared heating panels to improve efficiency.
