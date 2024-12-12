@@ -91,6 +91,7 @@ This was insufficient, leading to failure at:
 ```math
 P_{\text{actual}} = 3.5 \text{ W}
 ```
+
 - Replaced MOSFETs with 24V relays for reliable switching of the nichrome wire.
 
 **Fried ESP32 Chip:**
