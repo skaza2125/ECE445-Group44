@@ -11,10 +11,6 @@
   - Temperature modulation within 3°F of the setpoint.
   - Noise levels below 60 dB for quiet operation.
   - Energy efficiency within 1000-1500W power consumption.
- 
-Initial System Design: <br/>
-![image](https://github.com/user-attachments/assets/9f151fe5-813a-4cf1-a9de-f5f05e997b6b)
-
 
 ---
 
@@ -95,9 +91,6 @@ This was insufficient, leading to failure at:
 ```math
 P_{\text{actual}} = 3.5 \text{ W}
 ```
-
-![image](https://github.com/user-attachments/assets/02edd52e-275e-4517-863b-483800d48da4)
-
 - Replaced MOSFETs with 24V relays for reliable switching of the nichrome wire.
 
 **Fried ESP32 Chip:**
