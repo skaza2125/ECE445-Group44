@@ -44,9 +44,9 @@ P = \frac{24^2}{3.5} \approx 165 \text{ W}
 \Delta T = \theta \cdot \frac{V^2}{\rho L^2}
 ```
 Where:
-- \(\rho\): Resistivity (or resistance per unit length).
+- ρ: Resistivity (or resistance per unit length).
 - \(L\): Length of the wire.
-- \(\theta\): Radial thermal resistance of the wire to ambient (a constant).
+- θ: Radial thermal resistance of the wire to ambient (a constant).
 
 - This formula indicates that the temperature increase is proportional to the square of the applied voltage and inversely proportional to the square of the wire length:
 
