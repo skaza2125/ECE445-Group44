@@ -80,8 +80,8 @@ P = \frac{24^2}{3.5} \approx 165 \text{ W}
   - Added safety features for high-current traces and voltage regulators.
   - Verified operation of DS18B20 sensors for precise temperature measurements.
 - Encountered issues with MOSFETs:
-  - MOSFETs overheated due to insufficient \(V_{GS}\) and high \(R_{DS}\).
-  - Analysis of the \(V_{DS}\) vs. \(I_{D}\) curve revealed operational limits. The MOSFET’s junction-to-ambient thermal resistance \(R_{\text{θJA}}\) and case-to-sink resistance \(R_{\text{θCS}}\) caused rapid temperature rise:
+  - MOSFETs overheated due to insufficient gate-to-source voltage \(V_{GS}\) and high drain-to-source resistance \(R_{DS}\).
+  - Analysis of the drain-to-source voltage \(V_{DS}\) vs. drain current \(I_{D}\) curve revealed operational limits. The MOSFET’s junction-to-ambient thermal resistance \(R_{\text{θJA}}\) and case-to-sink resistance \(R_{\text{θCS}}\) caused rapid temperature rise:
 
 ```math
 P_{\text{max}} = 2.8 \text{ W}
