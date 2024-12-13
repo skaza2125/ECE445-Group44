@@ -54,14 +54,28 @@ Our final round of PCB orders was placed this week after confirming what made ou
 
 
 **Week of 11/18**:
-The enclosure was received back from the machine shop, allowing the team to assemble the system fully. The final PCB iteration arrived and was soldered, enabling full integration of all components. The ESP32 was successfully flashed with firmware, although our JTAG input didn't work initially due to some solderinig mistakes. The tests demonstrated functionality for nichrome wire heating, airflow control, and temperature monitoring under certain circumstances. The team conducted our mock demo as well, mostly showcasing the enclosure and how hot the nichrome actually got. The system is essentially fully built currently, but our main issue is with the MOSFET that conducts heat through the nichrome wire. The MOSFET is rated for our voltage and power, but it requires a heatsink even for the powers that we are running through it, one that we don't have. While experimenting, we burnt most of these power MOSFETs since the heat travelling through the substrate of the MOSFET was simply too high, conducting 62.5 C/W through Rds. Our calculations yielded a whopping 700C being shunted through our MOSFET, which simply will not work for our purposes. We will instead have to step back and get a relay externally to switch our power into the nichrome, rather than using just the MOSFET as a switch.
+The enclosure was received back from the machine shop, allowing the team to assemble the system fully. The final PCB iteration arrived and was soldered, enabling full integration of all components. The ESP32 was successfully flashed with firmware, although our JTAG input didn't work initially due to some soldering mistakes. The tests demonstrated functionality for nichrome wire heating, airflow control, and temperature monitoring under certain circumstances. The team conducted our mock demo as well, mostly showcasing the enclosure and how hot the nichrome actually got. The system is essentially fully built currently, but our main issue is with the MOSFET that conducts heat through the nichrome wire. The MOSFET is rated for our voltage and power, but it requires a heatsink even for the powers that we are running through it, one that we don't have. While experimenting, we burnt most of these power MOSFETs since the heat travelling through the substrate of the MOSFET was simply too high, conducting 62.5 C/W through Rds. Our calculations yielded a whopping 700C being shunted through our MOSFET, which simply will not work for our purposes. We will instead have to step back and get a relay externally to switch our power into the nichrome, rather than using just the MOSFET as a switch.
 ![image](https://github.com/user-attachments/assets/95906402-552d-4da0-a268-0b09dd80be5e)
 ![image](https://github.com/user-attachments/assets/5a1c5cee-07b9-43a6-a62e-4de97e3e33cc)
 ![image](https://github.com/user-attachments/assets/d6610a46-8f88-4107-a561-31d747f31205)
+![image](https://github.com/user-attachments/assets/fb6706f5-f4d9-4d83-8669-627afeb79df3)
 
 
-**Week of 11/30**:
-This week involved rigorous testing of the fully assembled system to ensure its reliability. Adjustments were made to fine-tune the PID control for precise temperature management. Final tests confirmed that the system successfully heated and ventilated the bed area as designed. The project is now prepared for the final presentation and evaluation.
+**Week of 11/25**:
+This week involved rigorous testing of the fully assembled system to show that it was able to work under strained conditions. A couple of tests confirmed that the system successfully heated and ventilated the area:
+- We let the product run for around 10 minutes to see if the new relay would work under a longer time than the MOSFET
+- Tested different lengths of nichrome to see which gauge would be optimal along with which resistance would heat and not melt or heat insufficiently
+- Used the oscilloscopes to check the healthiness of the PWM signal communicating to the fans from the ESP
+The project is relatively ready for demo, but we also worked on getting the PCB enclosure mounted to the rest of the product. Along with this, new connectors were crimped for both the relay, external buck converter and power supply inputs. Of our high level requirements, we successfully fulfilled all three:
+- Able to regulate temperature within 3deg of 90F, and cool down if user requires non-heated environment
+- Power requirements severely under 750W, measuring in aroun 400 at most.
+- Under 60dB consistently
+![image](https://github.com/user-attachments/assets/8e5ff1bc-fd26-4dfe-938b-6b512e336c36)
+
+![image](https://github.com/user-attachments/assets/33758218-0c50-42eb-ae0f-318532051c01)
+
+ **Week of 12/2**:
+Our last week on the project consisted of last wrap ups and tests we needed to do before our demo and presentation. A couple of issues cropped up during these final checks, mainly the buck converter snapping due to a short we accidentally caused, along with overvolting the ESP. Toasting the ESP was an issue that could only be solved by replacing the circuit board altogether, a lengthy process that resulted in us completely deconstructing the first and replacing the parts on a new PCB. Additionally, we had a couple of spare bucks on hand which did come in handy to replace our broken one. The end product worked within our high level requirements, and worked within demomonstration during our final demo.
 
 https://github.com/user-attachments/assets/5ad44222-92b0-4147-9c3f-b190f8b11859
 
